@@ -79,29 +79,7 @@
 
             <!-- Repeat the structure for other mods -->
         </section>
-
-        <section class="main-content">
-            <div class="mods" id="modsContainer">
-                <!-- Existing mod boxes will be appended here -->
-            </div>
-
-            <!-- Add Mod Form -->
-            <form id="addModForm">
-                <input type="file" id="modImage" accept="image/*" required>
-                <input type="text" id="modTitle" placeholder="Title" required>
-                <textarea id="modDescription" placeholder="Description" required></textarea>
-                <input type="date" id="modReleaseDate" required>
-                <input type="text" id="modGame" placeholder="Game" required>
-                <button type="button" onclick="addMod()">Add Mod</button>
-            </form>
-        </section>
         
-        <h1>Image Upload Form</h1>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="image" accept="image/*" required>
-            <button type="submit">Upload Image</button>
-        </form>
-
         <!-- Footer Section -->
         <footer>
             <nav>
