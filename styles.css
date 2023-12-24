@@ -1,0 +1,360 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li, form, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #001f3f; /* Light background color */
+    color: #fff; /* Dark text color */
+    padding: 20px; /* Increase the padding on the left and right sides */
+    font-size: 16px; /* Adjusted base font size for better readability */
+    line-height: 1.8; /* Adjusted line height for better readability */    
+}
+
+
+/* Global styling for links */
+a {
+    color: #0074cc; /* Blue link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header styles */
+header {
+    background-color: #0074cc; /* White background for header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%; /* Ensure the logo image doesn't exceed its container */
+    height: 100px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #0099ff; /* Hover color: Bright blue */
+}
+
+/* Hero Section styles */
+.hero {
+    position: relative;
+    text-align: center;
+    color: #fff; /* White text color */
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero.jpg') center/cover no-repeat; /* Gradient overlay on hero image */
+}
+
+.hero img {
+    max-width: 100%; /* Ensure the hero image doesn't exceed its container */
+    height: auto;
+}
+
+/* Portfolio Section styles */
+.project-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Adjusted column layout for responsiveness */
+    gap: 20px;
+}
+
+.project img {
+    max-width: 100%; /* Ensure images within the project showcase fit their container */
+    height: auto;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #0099ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #0074cc; /* Hover color: Blue */
+}
+
+/* Main Content Section styles */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-us,
+.services,
+.portfolio,
+.contact {
+    margin-bottom: 40px;
+}
+
+.about-us h2,
+.services h2,
+.portfolio h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Achievements styles */
+.achievements {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.achievement {
+    text-align: center;
+    flex: 0 0 30%; /* Adjust the width of achievement items */
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Cards styles */
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Portfolio Section styles */
+.project-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.view-more {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #0099ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.view-more:hover {
+    background-color: #0074cc; /* Hover color: Blue */
+}
+
+/* Contact Section styles */
+.contact {    
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    color: #000;
+    margin: 0 auto;
+    width: 60%;
+    padding: 50px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Fine-tuned box shadow */
+}
+
+.contact:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border-radius: 0 0 0 15px;
+    transform: translateX(50%) translateY(-50%) rotate(45deg);
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    z-index: 1;
+}
+
+.contact form label {
+    width: 100%;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 16px;
+    display: block;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+    width: 100%;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 14px;
+}
+
+.contact form button {
+    background-color: #0099ff;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact form button:hover {
+    background-color: #0074cc;
+    color: #fff;
+}
+
+.contact .contact-details {
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Footer Section styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer nav a {
+    color: #fff;
+    margin: 0 20px;
+    font-size: 14px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.cta-button,
+.view-more,
+.contact form button {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Added color transition */
+}
+
+.mods {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    background-color: #0074cc
+}
+
+.mod {
+    background-color: #001f3f; /* Set to match the main page background color */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+}
+
+.mod-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.mod img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd; /* Add a border between image and text */
+    margin-bottom: 10px;
+}
+
+.mod h3,
+.mod p {
+    color: #fff; /* Set text color to white */
+    margin-bottom: 10px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row > div {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px;
+    color: #333; /* Dark text color */
+}
+
+/* Add this style for the mod image */
+.mod-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+/* Add more styles as needed */
+

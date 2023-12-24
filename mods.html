@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <script src="mod-pages.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Glowing Desert</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            /* Add styles for the splash page */
+            .splash-container {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
+                justify-content: center;
+                align-items: center;
+                color: #fff; /* Text color */
+                text-align: center;
+                z-index: 9999;
+            }
+
+            .close-splash {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+                color: #fff;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="Glowing Desert Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h2> Mods </h2>
+        <!-- Mods Section -->
+        <section class="mods">    
+            <div class="mod">
+                <div class="mod-content">
+                    <a href="javascript:void(0);" onclick="loadModPage('00001')">
+                        <img src="images/ck2ra&lmmod.png" alt="Mod 1 Image">
+                    </a>
+                    <h3>CK2 Republic Army & Loyalist Militia</h3>
+                    <p>The mod contains 2 decisions The first one is just for Republic governments which is raise a number of 500 solider for an amount of cash The second is...</p>
+                    <p>Aug 5 2019</p>
+                    <p>Crusader King II</p>
+                </div>
+            </div>
+            
+            <div class="mod">
+                <div class="mod-content">
+                    <a href="javascript:void(0);" onclick="loadModPage('00002')">
+                        <img src="images/PhoenixMod.png" alt="Mod 2 Image">
+                    </a>
+                    <h3>EUIV Phoenix mod</h3>
+                    <p>Restore ancient Egypt and change history, dive into the culture and religion This mod will change the middle eastern gameplay forever in EUIV please notice...</p>
+                    <p>TBD</p>
+                    <p>Europa Universalis IV</p>
+                </div>
+            </div>
+
+            <!-- Repeat the structure for other mods -->
+        </section>
+
+        <section class="main-content">
+            <div class="mods" id="modsContainer">
+                <!-- Existing mod boxes will be appended here -->
+            </div>
+
+            <!-- Add Mod Form -->
+            <form id="addModForm">
+                <input type="file" id="modImage" accept="image/*" required>
+                <input type="text" id="modTitle" placeholder="Title" required>
+                <textarea id="modDescription" placeholder="Description" required></textarea>
+                <input type="date" id="modReleaseDate" required>
+                <input type="text" id="modGame" placeholder="Game" required>
+                <button type="button" onclick="addMod()">Add Mod</button>
+            </form>
+        </section>
+        
+        <h1>Image Upload Form</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Upload Image</button>
+        </form>
+
+        <!-- Footer Section -->
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Social Media</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2023 Glowing Desert. All Rights Reserved.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
